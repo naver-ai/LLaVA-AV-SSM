@@ -15,6 +15,7 @@
 - Audio brings small gains on common suites but is decisive on curated, audio-sensitive subsets (AVQA-Hard, Music-AVQA-Hard).
 
 ## Updates
+- 2025-11-24: The proposed curated benchmark sets are available at Hugging Face. These are formatted for compatibility with [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval).
 - 2025-09-22: Preprint released on arXiv.
 
 ## Introduction
@@ -23,6 +24,17 @@ Most “video understanding” evaluations ignore audio, yet real videos are inh
 For more detailed information, please refer to our paper linked below:<br>
 > [**Does Audio Matter for Modern Video-LLMs and Their Benchmarks?**](https://arxiv.org/abs/2509.17901).<br>
 > [Geewook Kim](https://geewook.kim) and [Minjoon Seo](https://scholar.google.com/citations?user=zYze5fIAAAAJ). Preprint, under review.
+
+## Datasets
+We release the **Hard** splits proposed in our paper, which filter out items solvable from a single frame to genuinely probe audio-visual reasoning.
+
+| Dataset | Description | HuggingFace Link |
+| :--- | :--- | :--- |
+| **AVQA-Hard** | A curated subset of AVQA, filtering out visual shortcuts solvable by single-frame inference. | [🤗 gwkrsrch2/avqa_hard](https://huggingface.co/datasets/gwkrsrch2/avqa_hard) |
+| **Music-AVQA-Hard** | A curated subset of Music-AVQA, specifically designed to penalize models that ignore audio. | [🤗 gwkrsrch2/music_avqa_hard](https://huggingface.co/datasets/gwkrsrch2/music_avqa_hard) |
+| **AVQA** | Reproduced AVQA dataset, re-packaged for `lmms-eval`. | [🤗 gwkrsrch2/avqa_2025](https://huggingface.co/datasets/gwkrsrch2/avqa_2025) |
+| **Music-AVQA** | The original Music-AVQA dataset, re-packaged for `lmms-eval`. | [🤗 gwkrsrch2/music_avqa](https://huggingface.co/datasets/gwkrsrch2/music_avqa) |
+
 
 ## Citation
 If you find this work useful, please cite:
